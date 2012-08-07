@@ -1,0 +1,225 @@
+/**
+ * VARIABLES
+ */
+
+/* Colors */
+$bg_color: #0D101A;
+$text_color: #DAEDE2;
+$link_color: #77C4D3;
+$heading_color: #F6F792;
+$light_color: #fff;
+
+/* Layout */
+$radius: 5px;
+
+/* Font weights */
+$fw_normal: 400;
+$fw_bold: 700;
+
+/**
+ * TYPOGRAPHY
+ *
+ * Anonymous Pro (Google Web Fonts)
+ * font-family: 'Anonymous Pro', sans-serif;
+ * font-weight: 400; (normal)
+ * font-weight: 700; (bold)
+ *
+ * Futura PT (Typekit)
+ * font-family: "futura-pt",sans-serif;
+ * font-weight: 400; (normal)
+ * font-weight: 700; (bold)
+ *
+ * FF Meta Serif Web Pro (Typekit)
+ * font-family: 'ff-meta-serif-web-pro', serif;
+ * font-weight: 500; (normal)
+ */
+
+html {
+  background: $bg_color;
+  font: $fw_normal 100%/1.5 'futura-pt', sans-serif;
+}
+
+body {
+  font-size: 1.25em;
+  color: $text_color;
+  line-height: 1.4;
+  margin: 0;
+  padding: 60px 60px 60px 120px;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  color: $heading_color;
+  font-weight: $fw_bold;
+}
+
+h1 {
+  font-size: 3.2em;
+  font-style: italic;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  font-weight: $fw_normal;
+}
+
+h1 a,
+h2 a {
+  color: $heading_color;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+input {
+  background: none;
+  border: 1px solid $link_color;
+  border-radius: $radius;
+  color: $link_color;
+  display: inline-block;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  outline: none;
+  padding: 15px 46px 15px 15px;
+}
+
+::-webkit-input-placeholder {
+  color: $link_color;
+}
+
+:-ms-input-placeholder {
+  color: $link_color;
+}
+
+:-moz-placeholder {
+  color: $link_color;
+}
+
+input:hover,
+input:focus,
+input:hover::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+  color: $light_color;
+}
+
+.search .icon-search {
+  color: $link_color;
+  font-size: 0.8em;
+  margin-left: -40px;
+}
+
+.podcasts {
+  list-style: none;
+  margin: 0;
+  max-width: 700px;
+  padding: 30px 0 0;
+}
+
+.podcast {
+  display: inline-block;
+  margin: 0 -170px 0 -30px;
+  padding: 30px 170px 30px 30px;
+  width: 100%;
+}
+
+.podcast figure {
+  display: none;
+  float: right;
+  margin-right: -170px;
+  max-width: 120px;
+}
+
+.podcast:hover figure {
+  display: block;
+}
+
+.podcast img {
+  border-radius: $radius;
+  -moz-box-shadow: 2px 2px 0px rgba($bg_color, .5), 0 0 90px $light_color;
+  -webkit-box-shadow: 2px 2px 0px rgba($bg_color, .5), 0 0 90px $light_color;
+  box-shadow: 2px 2px 0px rgba($bg_color, .5), 0px 0px 90px rgba($light_color, 0.4);
+  max-width: 100%;
+}
+
+.subscribe {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.subscribe li {
+  float: left;
+}
+
+.subscribe a {
+  border: 1px solid $link_color;
+  border-radius: $radius;
+  display: inline-block;
+  font-family: 'Helvetica Neue',sans-serif;
+  font-size: 0.6em;
+  font-weight: $fw_normal;
+  margin-right: 8px;
+  padding: 3px 10px;
+}
+
+.subscribe a:hover,
+.subscribe a:focus {
+  color: $light_color;
+}
+
+.subscribe a span {
+  font-size: 0.888em;
+}
+
+.description {
+  height: 28px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.podcast:hover .description {
+  height: auto;
+  overflow: auto;
+  white-space: normal;
+}
+
+.button {
+  border: 1px solid $link_color;
+  border-radius: $radius;
+  display: inline-block;
+  font-weight: $fw_bold;
+  line-height: 1.5;
+  margin-left: 20px;
+  padding: 15px;
+}
+
+.button:hover,
+.button:focus {
+  color: $light_color;
+}
+
+@-moz-document url-prefix() {
+  .button {
+    padding: 13px 15px;
+  }
+}
+
+footer {
+  padding-top: 120px;
+}

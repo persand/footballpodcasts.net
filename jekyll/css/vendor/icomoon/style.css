@@ -1,0 +1,81 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon.eot');
+	src: url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.svg#icomoon') format('svg'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+	font-family: 'icomoon';
+	font-style: normal;
+	speak: none;
+}
+.icon-music:before {
+	content: "\21";
+}
+.icon-feed:before {
+	content: "\22";
+}
+.icon-mail:before {
+	content: "\23";
+}
+.icon-search:before {
+	content: "\24";
+}
+.icon-loading:before {
+	content: "\25";
+}
+.icon-download:before {
+	content: "\26";
+}
+.icon-link:before {
+	content: "\27";
+}
+.icon-out:before {
+	content: "\2c";
+}
+.icon-share:before {
+	content: "\2d";
+}
+.icon-facebook:before {
+	content: "\2e";
+}
+.icon-twitter:before {
+	content: "\2f";
+}
+.icon-android:before {
+	content: "\30";
+}
+.icon-apple:before {
+	content: "\31";
+}
+.icon-windows:before {
+	content: "\32";
+}
+.icon-search-2:before {
+	content: "\33";
+}
+.icon-creative-commons:before {
+	content: "\34";
+}
+.icon-checkmark:before {
+	content: "\35";
+}
+.icon-cancel:before {
+	content: "\36";
+}
+.icon-clock:before {
+	content: "\37";
+}
