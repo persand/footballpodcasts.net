@@ -1,0 +1,126 @@
+/**
+ * TYPOGRAPHY
+ *
+ * Anonymous Pro (Google Web Fonts)
+ * font-family: 'Anonymous Pro', sans-serif;
+ * font-weight: 400; (normal)
+ * font-weight: 700; (bold)
+ *
+ * Futura PT (Typekit)
+ * font-family: "futura-pt",sans-serif;
+ * font-weight: 400; (normal)
+ * font-weight: 700; (bold)
+ *
+ * FF Meta Serif Web Pro (Typekit)
+ * font-family: 'ff-meta-serif-web-pro', serif;
+ * font-weight: 500; (normal)
+ */
+
+html {
+  background: #141826;
+  border-left: 10px solid rgba(0, 0, 0, .3);
+  font: 400 100%/1.5 'futura-pt', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background: rgba(0, 0, 0, .3);
+  font-size: 1.25em;
+  color: #DAEDE2;
+  line-height: 1.4;
+  margin: 0;
+  padding: 60px 60px 60px 120px;
+}
+
+a {
+  color: #77C4D3;
+  text-decoration: none;
+}
+
+h1 {
+  color: #F6F792;
+  font-size: 3.2em;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  font-family: 'futura-pt', serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+h1 a,
+h2 a {
+  color: #EA2E49;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.podcasts {
+  list-style: none;
+  margin: 0;
+  max-width: 700px;
+  padding: 30px 0 0;
+}
+
+.podcast {
+  border-radius: 4px;
+  display: inline-block;
+  margin: 0 -30px;
+  padding: 30px;
+  width: 100%;
+}
+
+.podcast:hover {
+  background: rgba(0, 0, 0, .3);
+  margin: 0 -9999px;
+  padding: 30px 9999px;
+}
+
+.podcast figure {
+  float: left;
+  margin: 0 25px 0 0;
+}
+
+.podcast img {
+  max-width: 40px;
+}
+
+.subscribe {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.subscribe li {
+  float: left;
+}
+
+.subscribe a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.description {
+  height: 28px;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.podcast:hover .description {
+  height: auto;
+  overflow: auto;
+  white-space: normal;
+}

@@ -1,0 +1,16 @@
+---
+layout: default
+title: Podcast
+---
+
+<img src="{{ page.model.image }}">
+
+<h1><a href="{{ page.model.url }}">{{ page.model.title }}</a></h1>
+
+<h2>Subscribe</h2>
+<ul>
+  <li><a href="{{ page.model.feed }}">RSS-feed</a></li>
+  <li><a href="{{ page.model.itunes }}">iTunes</a></li>
+</ul>
+
+<p>{{ page.model.description }}</p>

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Podcasts
+---
+
+<h1>Podcasts</h1>
+
+<ul>
+{% for model in site.podcast %}
+  <li>
+    <a href="{{ model.mdl_name }}/">{{ model.title }}</a>
+  </li>
+{% endfor %}
+</ul>

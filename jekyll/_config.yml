@@ -1,0 +1,4 @@
+permalink: /archive/:year/:month/:title/
+
+jekyll_models: [podcast]
+jekyll_models_urls: rest-like

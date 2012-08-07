@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<ul>
+{% for model in site.podcast %}
+  <li>
+    <a href="{{ model.mdl_name }}/">{{ model.title }}</a>
+  </li>
+{% endfor %}
+</ul>

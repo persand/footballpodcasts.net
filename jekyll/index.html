@@ -1,0 +1,41 @@
+---
+layout: default
+title: Football podcasts
+---
+
+<header class="header" role="banner">
+  <hgroup>
+    <h1>Football<br>podcasts</h1>
+  </hgroup>
+</header>
+<!-- / .header -->
+
+<article id="podcasts" class="content" role="main">
+  <!--<div class="search" role="search">
+    <input type="text" class="search-query">
+  </div>-->
+  <!-- / .search -->
+
+  <ul class="podcasts">
+  {% for model in site.podcast %}
+    <li class="podcast">
+      <h2 class="title"><a href="/podcast/{{ model.mdl_name }}/">{{ model.title }}</a></h2>
+      <ul class="subscribe">
+        <li class="subscribe-itunes"><a href="{{ model.feed }}">RSS-feed</a></li>
+        <li class="subscribe-itunes"><a href="{{ model.itunes }}">iTunes</a></li>
+      </ul>
+      <p class="description">{{ model.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+</article>
+
+<aside class="add-podcast" role="complementary">
+  <a href="#">Add podcast</a>
+
+  <iframe src="https://docs.google.com/a/helloper.com/spreadsheet/embeddedform?formkey=dGEzOVJ1Rk5PSDRZcGxfcHJVOVMyUFE6MQ" width="760" height="842" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</aside>
+
+<footer role="contentinfo">
+
+</footer>
