@@ -24,7 +24,10 @@ window.onload = function() {
 			'icon-creative-commons' : '&#x34;',
 			'icon-checkmark' : '&#x35;',
 			'icon-cancel' : '&#x36;',
-			'icon-clock' : '&#x37;'
+			'icon-clock' : '&#x37;',
+			'icon-plus' : '&#x28;',
+			'icon-plus-alt' : '&#x29;',
+			'icon-plus-2' : '&#x2a;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;

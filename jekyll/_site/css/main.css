@@ -85,7 +85,11 @@ input:hover,
 input:focus,
 input:hover::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder {
-  color: white; }
+  color: white;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
 
 .search .icon-search {
   color: #77c4d3;
@@ -142,7 +146,11 @@ input:focus::-webkit-input-placeholder {
 
 .subscribe a:hover,
 .subscribe a:focus {
-  color: white; }
+  color: white;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
 
 .subscribe a span {
   font-size: 0.888em; }
@@ -170,7 +178,11 @@ input:focus::-webkit-input-placeholder {
 
 .button:hover,
 .button:focus {
-  color: white; }
+  color: white;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
 
 @-moz-document url-prefix() {
   .button {

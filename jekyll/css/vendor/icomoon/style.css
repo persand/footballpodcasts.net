@@ -79,3 +79,12 @@
 .icon-clock:before {
 	content: "\37";
 }
+.icon-plus:before {
+	content: "\28";
+}
+.icon-plus-alt:before {
+	content: "\29";
+}
+.icon-plus-2:before {
+	content: "\2a";
+}
