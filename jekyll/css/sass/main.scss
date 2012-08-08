@@ -3,13 +3,28 @@
  */
 
 /* Colors */
-$bg_color: #0D101A;
+/*$bg_color: #0D101A;
 $text_color: #DAEDE2;
 $link_color: #77C4D3;
 $heading_color: #F6F792;
+$light_color: #fff;*/
+
+/*
+$bg_color: #0E223D;
+$text_color: #fff;
+$link_color: #29ABA5;
+$heading_color: #2FDBA8;
+$light_color: #fff;
+*/
+
+$bg_color: #0B1C33;
+$text_color: #fff;
+$link_color: #F2594B;
+$heading_color: #2FDBA8;
 $light_color: #fff;
 
 /* Layout */
+$body_margin: 4.5em;
 $radius: 5px;
 
 /* Font weights */
@@ -44,7 +59,8 @@ body {
   color: $text_color;
   line-height: 1.4;
   margin: 0;
-  padding: 60px 60px 60px 120px;
+  max-width: 700px;
+  padding: $body_margin;
 }
 
 a {
@@ -62,6 +78,7 @@ h1 {
   font-size: 3.2em;
   font-style: italic;
   line-height: 1;
+  margin: 0 0 0.625em;
 }
 
 h2 {
@@ -74,7 +91,23 @@ h3 {
 
 h1 a,
 h2 a {
+  border-radius: 0;
   color: $heading_color;
+  display: inline-block;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+h1 a:hover,
+h1 a:focus,
+h2 a:hover,
+h2 a:focus {
+  background: $heading_color;
+  border-radius: 2px;
+  color: $bg_color;
+
 }
 
 p {
@@ -127,7 +160,6 @@ input:focus::-webkit-input-placeholder {
 .podcasts {
   list-style: none;
   margin: 0;
-  max-width: 700px;
   padding: 30px 0 0;
 }
 
@@ -145,7 +177,7 @@ input:focus::-webkit-input-placeholder {
   max-width: 120px;
 }
 
-.podcast:hover figure {
+.no-touch .podcast:hover figure {
   display: block;
 }
 
@@ -201,7 +233,7 @@ input:focus::-webkit-input-placeholder {
   white-space: nowrap;
 }
 
-.podcast:hover .description {
+.no-touch .podcast:hover .description {
   height: auto;
   overflow: auto;
   white-space: normal;
@@ -234,4 +266,17 @@ input:focus::-webkit-input-placeholder {
 
 footer {
   padding-top: 120px;
+}
+
+footer a {
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+footer a:hover {
+  background: $link_color;
+  border-radius: 2px;
+  color: $bg_color;
 }
