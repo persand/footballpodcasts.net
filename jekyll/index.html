@@ -31,7 +31,7 @@ title: Football podcasts
   <ul class="podcasts">
   {% for model in site.podcast %}
     <li class="podcast">
-      <figure><img src="{{ model.image }}" alt="{{ model.title }} logo"></figure>
+      <figure><img src="/img/podcasts/{{ model.image }}" alt="{{ model.title }} logo"></figure>
 
       <!--<h2 class="title"><a href="/podcast/{{ model.mdl_name }}/">{{ model.title }}</a></h2>-->
       <h2 class="title"><a href="{{ model.url }}">{{ model.title }}</a></h2>
