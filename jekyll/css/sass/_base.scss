@@ -1,0 +1,29 @@
+/**
+ * VARIABLES
+ */
+
+$bg_color: #0B1C33;
+$text_color: #fff;
+$link_color: #F2594B;
+$heading_color: #2FDBA8;
+$light_color: #fff;
+
+/* Layout */
+$body_margin: 20px;
+$radius: 5px;
+$break-small: 320px;
+$break-large: 1024px;
+$page-max-width: 1280px;
+
+/* Font weights */
+$fw_normal: 400;
+$fw_bold: 700;
+
+/**
+ * Box sizing: border-box
+ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

@@ -1,230 +1,66 @@
-/**
- * VARIABLES
- */
-/* Colors */
-/*$bg_color: #0D101A;
-$text_color: #DAEDE2;
-$link_color: #77C4D3;
-$heading_color: #F6F792;
-$light_color: #fff;*/
 /*
-$bg_color: #0E223D;
-$text_color: #fff;
-$link_color: #29ABA5;
-$heading_color: #2FDBA8;
-$light_color: #fff;
+Syntax error: File to import not found or unreadable: app.
+              Load paths:
+                /Users/per/Sites/footballpodcasts.net/jekyll
+                /Users/per/Sites/footballpodcasts.net/jekyll/css/sass
+        on line 2 of css/sass/main.scss
+
+1: @import 'base';
+2: @import 'app';
+3: 
+4: /* */
+
+Backtrace:
+css/sass/main.scss:2
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/import_node.rb:64:in `import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/import_node.rb:25:in `imported_file'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:227:in `visit_import'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:107:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:119:in `with_environment'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:106:in `visit_children'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:126:in `visit_root'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:98:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:340:in `update_stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:202:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `each'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:200:in `update_stylesheets'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:298:in `watch'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:86:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:86:in `on_change'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:95:in `initialize_adapter'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:55:in `call'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:55:in `poll'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:31:in `initialize'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:31:in `new'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/adapters/polling.rb:31:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/vendor/listen/lib/listen/multi_listener.rb:44:in `start'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin/compiler.rb:306:in `watch'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/exec.rb:431:in `watch_or_update'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/exec.rb:302:in `process_result'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.1/bin/sass:8
+/usr/bin/sass:23:in `load'
+/usr/bin/sass:23
 */
-/* Layout */
-/* Font weights */
-/**
- * TYPOGRAPHY
- *
- * Anonymous Pro (Google Web Fonts)
- * font-family: 'Anonymous Pro', sans-serif;
- * font-weight: 400; (normal)
- * font-weight: 700; (bold)
- *
- * Futura PT (Typekit)
- * font-family: "futura-pt",sans-serif;
- * font-weight: 400; (normal)
- * font-weight: 700; (bold)
- *
- * FF Meta Serif Web Pro (Typekit)
- * font-family: 'ff-meta-serif-web-pro', serif;
- * font-weight: 500; (normal)
- */
-html {
-  background: #0b1c33;
-  font: 400 100%/1.5 "futura-pt", sans-serif; }
-
-body {
-  font-size: 1.25em;
-  color: white;
-  line-height: 1.4;
-  margin: 0;
-  max-width: 700px;
-  padding: 4.5em; }
-
-a {
-  color: #f2594b;
-  text-decoration: none; }
-
-h1,
-h2 {
-  color: #2fdba8;
-  font-weight: 700; }
-
-h1 {
-  font-size: 3.2em;
-  font-style: italic;
-  line-height: 1;
-  margin: 0 0 0.625em; }
-
-h2 {
-  margin: 0; }
-
-h3 {
-  font-weight: 400; }
-
-h1 a,
-h2 a {
-  border-radius: 0;
-  color: #2fdba8;
-  display: inline-block;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
-
-h1 a:hover,
-h1 a:focus,
-h2 a:hover,
-h2 a:focus {
-  background: #2fdba8;
-  border-radius: 2px;
-  color: #0b1c33; }
-
-p {
-  margin: 0 0 1em; }
-
-input {
-  background: none;
-  border: 1px solid #f2594b;
-  border-radius: 5px;
-  color: #f2594b;
-  display: inline-block;
-  font-family: 'futura-pt', sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1.5;
-  outline: none;
-  padding: 15px 46px 15px 15px; }
-
-::-webkit-input-placeholder {
-  color: #f2594b; }
-
-:-ms-input-placeholder {
-  color: #f2594b; }
-
-:-moz-placeholder {
-  color: #f2594b; }
-
-input:hover,
-input:focus,
-input:hover::-webkit-input-placeholder,
-input:focus::-webkit-input-placeholder {
-  color: white;
-  -moz-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
-
-.search .icon-search {
-  color: #f2594b;
-  font-size: 0.8em;
-  margin-left: -40px; }
-
-.podcasts {
-  list-style: none;
-  margin: 0;
-  padding: 30px 0 0; }
-
-.podcast {
-  display: inline-block;
-  margin: 0 -170px 0 -30px;
-  padding: 30px 170px 30px 30px;
-  width: 100%; }
-
-.podcast figure {
-  display: none;
-  float: right;
-  margin-right: -170px;
-  max-width: 120px; }
-
-.no-touch .podcast:hover figure {
-  display: block; }
-
-.podcast img {
-  border-radius: 5px;
-  -moz-box-shadow: 2px 2px 0px rgba(11, 28, 51, 0.5), 0 0 90px white;
-  -webkit-box-shadow: 2px 2px 0px rgba(11, 28, 51, 0.5), 0 0 90px white;
-  box-shadow: 2px 2px 0px rgba(11, 28, 51, 0.5), 0px 0px 90px rgba(255, 255, 255, 0.4);
-  max-width: 100%; }
-
-.subscribe {
-  display: inline-block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-
-.subscribe li {
-  float: left; }
-
-.subscribe a {
-  border: 1px solid #f2594b;
-  border-radius: 5px;
-  display: inline-block;
-  font-family: 'Helvetica Neue',sans-serif;
-  font-size: 0.6em;
-  font-weight: 400;
-  margin-right: 8px;
-  padding: 3px 10px; }
-
-.subscribe a:hover,
-.subscribe a:focus {
-  color: white;
-  -moz-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
-
-.subscribe a span {
-  font-size: 0.888em; }
-
-.description {
-  height: 28px;
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-.no-touch .podcast:hover .description {
-  height: auto;
-  overflow: auto;
-  white-space: normal; }
-
-.button {
-  border: 1px solid #f2594b;
-  border-radius: 5px;
-  display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-left: 20px;
-  padding: 15px; }
-
-.button:hover,
-.button:focus {
-  color: white;
-  -moz-transition: color .3s ease-in-out;
-  -o-transition: color .3s ease-in-out;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
-
-@-moz-document url-prefix() {
-  .button {
-    padding: 13px 15px; } }
-
-footer {
-  padding-top: 120px; }
-
-footer a {
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
-
-footer a:hover {
-  background: #f2594b;
-  border-radius: 2px;
-  color: #0b1c33; }
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: app.\A               Load paths:\A                 /Users/per/Sites/footballpodcasts.net/jekyll\A                 /Users/per/Sites/footballpodcasts.net/jekyll/css/sass\A         on line 2 of css/sass/main.scss\A \A 1: @import 'base';\A 2: @import 'app';\A 3: \A 4: /* */"; }

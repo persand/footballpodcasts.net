@@ -10,38 +10,50 @@ title: Football podcasts
 </header>
 <!-- / .header -->
 
-<article id="podcasts" class="content" role="main">
-  <nav class="search" role="nav">
-    <input aria-hidden="true" type="text" class="search-query" placeholder="Search…">
-    <span aria-hidden="true" class="icon-search"></span>
-    <a class="button add-podcast" title="Have we missed something? Please submit it!" href="https://docs.google.com/a/helloper.com/spreadsheet/embeddedform?formkey=dGEzOVJ1Rk5PSDRZcGxfcHJVOVMyUFE6MQ">
-      Add podcast
-    </a>
+<section id="podcasts" class="content" role="main">
+  <nav class="nav" role="nav">
+    <div class="search">
+      <input aria-hidden="true" type="text" class="search-query" placeholder="Search…">
+
+      <span aria-hidden="true" class="icon-search"></span>
+    </div>
+    <!-- / .search -->
+
+    <!--<div class="add-podcast">
+      <a class="button" title="Have we missed something? Please submit it!" href="https://docs.google.com/a/helloper.com/spreadsheet/embeddedform?formkey=dGEzOVJ1Rk5PSDRZcGxfcHJVOVMyUFE6MQ">
+        <span aria-hidden="true" class="icon-plus-alt"></span> <span class="text">Add podcast</span>
+      </a>
+    </div>-->
+    <!-- / .add-podcast -->
   </nav>
-  <!-- / .search -->
+  <!-- / .nav -->
 
   <ul class="podcasts">
   {% for model in site.podcast %}
     <li class="podcast">
       <figure><img src="{{ model.image }}" alt="{{ model.title }} logo"></figure>
+
       <!--<h2 class="title"><a href="/podcast/{{ model.mdl_name }}/">{{ model.title }}</a></h2>-->
       <h2 class="title"><a href="{{ model.url }}">{{ model.title }}</a></h2>
+
       <ul class="subscribe">
-        <li class="subscribe-itunes"><a href="{{ model.feed }}"><span aria-hidden="true" class="icon-feed"></span>&nbsp;RSS-feed</a></li>
-        <li class="subscribe-itunes"><a href="{{ model.itunes }}"><span aria-hidden="true" class="icon-music"></span>
-&nbsp;iTunes</a></li>
+        <li class="subscribe-itunes">
+          <a href="{{ model.feed }}">
+            <span aria-hidden="true" class="icon-feed"></span>&nbsp;RSS-feed
+          </a>
+        </li>
+        <li class="subscribe-itunes">
+          <a href="{{ model.itunes }}">
+            <span aria-hidden="true" class="icon-music"></span>&nbsp;iTunes
+          </a>
+        </li>
       </ul>
+
       <p class="description">{{ model.description }}</p>
     </li>
   {% endfor %}
   </ul>
-</article>
-
-<!--<aside class="add-podcast" role="complementary">
-  <a href="#">Add podcast</a>
-
-  <iframe src="https://docs.google.com/a/helloper.com/spreadsheet/embeddedform?formkey=dGEzOVJ1Rk5PSDRZcGxfcHJVOVMyUFE6MQ" width="760" height="842" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-</aside>-->
+</section>
 
 <footer role="contentinfo">
   <p>Designed and developed by <a href="http://www.helloper.com">Per Sandström</a>.</p>
