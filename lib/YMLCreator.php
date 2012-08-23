@@ -5,7 +5,7 @@ Class YMLCreator {
   private $yml_directory;
   private $image_directory;
   private $fields;
-  private $row;
+  private $row = 1;
   private $skip_rows = 1;
   private $handle;
   private $data;
@@ -30,45 +30,8 @@ Class YMLCreator {
     $this->fields[6] = 'image';
   }
 
-  public function getSource()
-  {
-    return $this->source;
-  }
-
-  public function setSource($source)
-  {
-    $this->source = $source;
-  }
-
-  public function getYMLDirectory()
-  {
-    return $this->yml_directory();
-  }
-
-  public function setYMLDirectory($directory)
-  {
-    $this->yml_directory = $directory;
-  }
-
-  public function getImageDirectory()
-  {
-    return $this->image_directory();
-  }
-
-  public function setImageDirectory($directory)
-  {
-    $this->image_directory = $directory;
-  }
-
-  public function setSkipRows($skip_rows)
-  {
-    $this->skip_rows = $skip_rows;
-  }
-
   public function readSource()
   {
-    $this->row = 1;
-
     if ($this->sourceIsValid()) {
       $this->removeYML();
 
@@ -116,9 +79,14 @@ Class YMLCreator {
     }
 
     $yml_file = $this->yml_directory . $this->slug . '.yml';
-    $yml_file = fopen($yml_file, 'w') or die('Cannot open file:  '.$yml_file);
-    fwrite($yml_file, $this->content);
-    fclose($yml_file);
+
+    try {
+      $yml_file = fopen($yml_file, 'w');
+      fwrite($yml_file, $this->content);
+      fclose($yml_file);
+    } catch (Exception $e) {
+      throw new Exception('Can\'t open file: ' . $yml_file);
+    }
 
     $this->slug = '';
     $this->content = '';
@@ -152,7 +120,7 @@ Class YMLCreator {
     $img = $this->slug . '.jpg';
     $url = file_get_contents($url);
 
-    if (empty($url)) return false;
+    if (empty($url)) return 'blank.gif';
 
     $this->removeImage($img);
 
