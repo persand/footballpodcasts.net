@@ -16,6 +16,3 @@ def deploy(where=None):
     ['.git', '.git*', 'fabfile.py*', '.DS_Store', '.htaccess'],
     True
   )
-
-def cleanup(Where=None):
-  sudo('rm -r Users/')
