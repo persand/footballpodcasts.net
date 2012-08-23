@@ -17,3 +17,5 @@ def deploy(where=None):
     True
   )
 
+def cleanup(Where=None):
+  sudo('rm -r Users/')
