@@ -8,11 +8,19 @@ var options = {
 };
 var podcastList = new List('podcasts', options);
 
-/**
- * Toggle description on click in touch devices
- */
+
 $(function() {
+  /**
+   * Toggle description on click in touch devices
+   */
   $('.touch .description').click(function() {
     $(this).toggleClass('show-description');
+  });
+
+  /**
+   * Lazyload podcast images
+   */
+  $(".podcast img").lazyload({
+    effect : "fadeIn"
   });
 });
