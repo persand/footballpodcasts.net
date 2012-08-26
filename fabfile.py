@@ -12,7 +12,7 @@ env.remote_dir = '/mnt/persist/www/footballpodcasts.net'
 def deploy(where=None):
   rsync_project(
     env.remote_dir,
-    '/Users/per/Sites/footballpodcasts.net/jekyll/_site/',
+    'jekyll/_site/',
     ['.git', '.git*', 'fabfile.py*', 'composer.*', '.DS_Store', '.htaccess'],
     True
   )
