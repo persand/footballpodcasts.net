@@ -1,6 +1,8 @@
 <?php
 namespace FootballPodcasts;
 
+use \PHPImageWorkshop\ImageWorkshop;
+
 Class YMLCreator {
   private $source;
   private $yml_directory;
@@ -13,7 +15,6 @@ Class YMLCreator {
   private $data_num;
   private $slug;
   private $content;
-  private $log = array();
 
   function __construct($source, $yml_directory, $image_directory)
   {
@@ -51,7 +52,7 @@ Class YMLCreator {
   }
 
   private function removeYML() {
-    foreach (new DirectoryIterator($this->yml_directory) as $file)
+    foreach (new \DirectoryIterator($this->yml_directory) as $file)
     if ($file->getExtension() == 'yml')
       unlink($this->yml_directory . $file->getFilename());
   }
@@ -129,6 +130,18 @@ Class YMLCreator {
       file_put_contents($this->image_directory . $img, $url);
     } catch (Exception $e) {
       throw new Exception('Could not save file (' . $img . ') to ' . $this->image_directory);
+    }
+
+    $image = new \PHPImageWorkshop\ImageWorkshop(array(
+      'imageFromPath' => $this->image_directory . $img,
+    ));
+
+    $image->resizeInPixel(180, null, true);
+
+    try {
+      $image->save($this->image_directory, $img, true, null, 100);
+    } catch (Exception $e) {
+      throw new Exception('Could not save resized file (' . $img . ') to ' . $this->image_directory);
     }
 
     return $img;
