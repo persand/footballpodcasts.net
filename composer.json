@@ -1,5 +1,8 @@
 {
     "require": {
         "sybio/image-workshop": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "FootballPodcasts": "src/" }
     }
 }
