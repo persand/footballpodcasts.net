@@ -1,2 +1,4 @@
+composer.lock
+vendor/*
 jekyll/_site*
 jekyll/Users
