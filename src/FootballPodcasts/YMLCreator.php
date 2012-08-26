@@ -1,8 +1,6 @@
 <?php
 namespace FootballPodcasts;
 
-use \PHPImageWorkshop\ImageWorkshop;
-
 Class YMLCreator {
   private $source;
   private $yml_directory;
@@ -119,10 +117,11 @@ Class YMLCreator {
   }
 
   private function saveImage($url) {
-    $img = $this->slug . '.jpg';
     $url = file_get_contents($url);
 
     if (empty($url)) return 'blank.gif';
+
+    $img = $this->slug . '.' . $this->getExtension($url);
 
     $this->removeImage($img);
 
@@ -132,19 +131,33 @@ Class YMLCreator {
       throw new Exception('Could not save file (' . $img . ') to ' . $this->image_directory);
     }
 
-    $image = new \PHPImageWorkshop\ImageWorkshop(array(
-      'imageFromPath' => $this->image_directory . $img,
-    ));
+    return $img;
+  }
 
-    $image->resizeInPixel(180, null, true);
+  private function getExtension($file) {
+    $file_info = new \finfo(FILEINFO_MIME);
+    $mime_type = $file_info->buffer($file);
+    $mime_type = explode(';', $mime_type);
 
-    try {
-      $image->save($this->image_directory, $img, true, null, 100);
-    } catch (Exception $e) {
-      throw new Exception('Could not save resized file (' . $img . ') to ' . $this->image_directory);
+    switch ($mime_type[0]) {
+      case 'image/jpeg':
+        $extension = 'jpg';
+        break;
+
+      case 'image/png':
+        $extension = 'png';
+        break;
+
+      case 'image/gif':
+        $extension = 'gif';
+        break;
+
+      default:
+        $extension = 'jpg';
+        break;
     }
 
-    return $img;
+    return $extension;
   }
 
   private function removeImage($image) {
