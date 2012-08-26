@@ -1,7 +1,7 @@
 <?php
 namespace FootballPodcasts;
 
-Class YMLCreator {
+Class PodcastGenerator {
   private $source;
   private $yml_directory;
   private $image_directory;
