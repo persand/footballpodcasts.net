@@ -2,6 +2,7 @@ gzip_assets: off
 
 javascripts:
   common:
+    - js/vendor/jquery.1.7.2.min.js
     - js/vendor/list.min.js
     - js/main.js
 

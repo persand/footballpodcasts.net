@@ -18,9 +18,10 @@ $(function() {
   });
 
   /**
-   * Lazyload podcast images
+   * Custom lazy load
    */
-  $(".podcast img").lazyload({
-    effect : "fadeIn"
+  $('.podcast').hover(function() {
+    var src = $('img', this).attr('data-original');
+    $('img', this).attr('src', src);
   });
 });

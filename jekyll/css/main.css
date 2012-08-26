@@ -190,7 +190,7 @@ input:focus::-webkit-input-placeholder {
   padding: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
   .podcast figure {
-    /*display: none;*/ }
+    display: none; }
   .podcast img {
     border-radius: 5px;
     -moz-box-shadow: 2px 2px 0px rgba(11, 28, 51, 0.5), 0 0 90px white;
