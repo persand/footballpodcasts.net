@@ -1,10 +1,6 @@
 {
-    "require": {
-        "sybio/image-workshop": "dev-master"
-    },
     "autoload": {
         "psr-0": {
-          "PHPImageWorkshop": "vendor/sybio/image-workshop/src",
           "FootballPodcasts": "src/"
         }
     }
