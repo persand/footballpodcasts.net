@@ -1,4 +1,7 @@
 composer.lock
+
 vendor/*
+!vendor/footballpodcasts/
+
 jekyll/_site*
 jekyll/Users
