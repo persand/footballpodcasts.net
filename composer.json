@@ -1,0 +1,5 @@
+{
+    "require": {
+        "sybio/image-workshop": "dev-master"
+    }
+}
