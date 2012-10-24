@@ -20,14 +20,15 @@ Class PodcastGenerator {
     $this->yml_directory = $yml_directory;
     $this->image_directory = $image_directory;
 
-    $this->fields = array();
-    $this->fields[0] = 'title';
-    $this->fields[1] = 'url';
-    $this->fields[2] = 'feed';
-    $this->fields[3] = 'itunes';
-    $this->fields[4] = 'description';
-    $this->fields[5] = 'language';
-    $this->fields[6] = 'image';
+    $this->fields = array(
+      'title',
+      'url',
+      'feed',
+      'itunes',
+      'description',
+      'language',
+      'image',
+    );
   }
 
   public function readSource()
@@ -50,13 +51,15 @@ Class PodcastGenerator {
   }
 
   private function removeYML() {
-    foreach (new \DirectoryIterator($this->yml_directory) as $file)
-    if ($file->getExtension() == 'yml')
-      unlink($this->yml_directory . $file->getFilename());
+    foreach (new \DirectoryIterator($this->yml_directory) as $file) {
+      if ($file->getExtension() == 'yml') {
+        unlink($this->yml_directory . $file->getFilename());
+      }
+    }
   }
 
   private function readData() {
-    while (($this->data = fgetcsv($this->handle, 1000, ",")) !== FALSE) {
+    while ($this->data = fgetcsv($this->handle, 1000, ",")) {
       $this->data_num = count($this->data);
 
       if ($this->row > $this->skip_rows) {
